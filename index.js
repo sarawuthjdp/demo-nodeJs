@@ -12,10 +12,17 @@ function downloading(url) {
       } else {
         reject(`เกิดข้อผิดพลาด`);
       }
-    }, 3000);
+    }, 1000);
   });
 }
 
+async function start() {
+  console.log(await downloading(url1));
+  console.log(await downloading(url2));
+  console.log(await downloading(url3));
+}
+
+start();
 //PromiseHell
 // downloading(url1).then((result)=>{
 //     console.log(result)
@@ -27,15 +34,15 @@ function downloading(url) {
 //     })
 // })
 
-downloading(url1)
-  .then((result) => {
-    console.log(result);
-    return downloading(url2);
-  })
-  .then((result) => {
-    console.log(result);
-    return downloading(url3);
-  })
-  .then((result) => {
-    console.log(result);
-  });
+// downloading(url1)
+//   .then((result) => {
+//     console.log(result);
+//     return downloading(url2);
+//   })
+//   .then((result) => {
+//     console.log(result);
+//     return downloading(url3);
+//   })
+//   .then((result) => {
+//     console.log(result);
+//   });
