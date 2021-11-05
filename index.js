@@ -3,7 +3,7 @@ const http = require('http')
 http.createServer((req,res)=>{
   const myHtml=`
     <h1>Hello World!</h1>
-    <p>Test demo node.js</p>
+    <p style="color:green">Test demo node.js</p>
   `
   res.write(myHtml)
   res.end()
