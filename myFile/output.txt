@@ -1,3 +1,0 @@
-Hello Node.js
-สวัสดี
-ไฟล์นี้ถูกเขียนเมื่อFri Nov 05 2021 16:14:00 GMT+0700 (Indochina Time)
