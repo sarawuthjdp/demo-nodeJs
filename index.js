@@ -1,6 +1,7 @@
-const util = require('./module/mymodule')
-const minus = require('./module/mymodule').minus
+const fs = require('fs')
 
-console.log(util.getCurrentTime())
-console.log(util.add(10,2))
-console.log(minus(5,2))
+const data = fs.readFileSync('./myFile/input.txt','utf-8')
+console.log(data)
+
+const outputText = `${data}\nทำไรวัยรุ่น`
+fs.writeFileSync('./myFile/input.txt',outputText)
