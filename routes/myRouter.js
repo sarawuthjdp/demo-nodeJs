@@ -19,8 +19,7 @@ router.get("/product/:id", (req, res) => {
   } else if (myparam === "3") {
     res.sendFile(path.join(__dirname, "../templates/product3.html"));
   } else {
-    res.status(404);
-    res.send("<h1>Not found</h1>");
+      res.redirect('/')
   }
 });
 
