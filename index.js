@@ -1,12 +1,16 @@
 const express = require('express')
+const path = require('path')
 const app = express()
-
 app.get(`/`,(req,res)=>{
-  res.send('<h1>Hello Express.js</h1>')
+  res.status(200)
+  res.type('text/html')
+  res.sendFile(path.join(__dirname,'templates/index.html'))
 })
 
 app.get(`/product`,(req,res)=>{
-  res.send('<h1>Hello product</h1>')
+  res.status(200)
+  res.type('text/html')
+  res.sendFile(path.join(__dirname,'templates/product1.html'))
 })
 
 app.listen(8080,()=>{
